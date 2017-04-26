@@ -51,6 +51,7 @@ def webhook():
         text = event['message']['text']  # Incoming Message Text
         messages = callBotAPI(text, sender)
         for payload in messages:
+            print payload
             sendMessageToFB(payload)
       elif('postback' in event and event['postback'] != None):
           messages = callBotAPI(event['postback']['payload'], sender)
