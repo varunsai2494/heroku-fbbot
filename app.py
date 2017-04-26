@@ -36,17 +36,26 @@ def callBotAPI(text, senderId):
 
     return messages
 
+def sendMessageToFB(payload):
+    r = requests.post('https://graph.facebook.com/v2.6/me/messages/?access_token=' + token,json=payload)  # Lets send it
+
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
   if request.method == 'POST':
     try:
       data = json.loads(request.data)
-      text = data['entry'][0]['messaging'][0]['message']['text'] # Incoming Message Text
-      sender = data['entry'][0]['messaging'][0]['sender']['id'] # Sender ID
+      event = data['entry'][0]['messaging'][0]
+      text = event['message']['text'] # Incoming Message Text
+      sender = event['sender']['id'] # Sender ID
       # payload = {'recipient': {'id': sender}, 'message': {'text': "Hello World"}} # We're going to send this back
-      messages = callBotAPI(text, sender)
-      for payload in messages:
-        r = requests.post('https://graph.facebook.com/v2.6/me/messages/?access_token=' + token, json=payload) # Lets send it
+      if('message' in event and event['message'] != None and 'text' in event['message'] and event['message']['text'] != None):
+        messages = callBotAPI(text, sender)
+        for payload in messages:
+            sendMessageToFB(payload)
+      elif('postback' in event['message'] and event['message']['postback'] != None):
+          messages = callBotAPI(event['postback']['payload'], sender)
+          for payload in messages:
+              sendMessageToFB(payload)
     except Exception as e:
       print traceback.format_exc() # something went wrong
   elif request.method == 'GET': # For the initial verification
