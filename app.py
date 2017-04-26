@@ -45,10 +45,10 @@ def webhook():
     try:
       data = json.loads(request.data)
       event = data['entry'][0]['messaging'][0]
-      text = event['message']['text'] # Incoming Message Text
       sender = event['sender']['id'] # Sender ID
       # payload = {'recipient': {'id': sender}, 'message': {'text': "Hello World"}} # We're going to send this back
       if('message' in event and event['message'] != None and 'text' in event['message'] and event['message']['text'] != None):
+        text = event['message']['text']  # Incoming Message Text
         messages = callBotAPI(text, sender)
         for payload in messages:
             sendMessageToFB(payload)
