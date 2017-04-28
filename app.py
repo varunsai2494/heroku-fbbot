@@ -6,16 +6,19 @@ import random
 app = Flask(__name__)
 
 token = "EAAEI5Yi88owBAIJYWZApylSkE2cydkyQc0qNKUpGBdjhNqKZA9QOdJ7yQSu0poTPDIdZCvtiH86q149TctBLl6jHglzeSHVGU2AdxtULLYAahnbzn5ZAoqTXauB8NLbZAN9pV5ORDifWuGc0W1YXHZAei9iT1bf1qQEga67etlmAZDZD"
+store={}
 
 
 def callBotAPI(text, senderId):
+
+    roomid=store[senderID] senderID in store.keys() else None
     url="http://botmanappserverloadbalancer-1494940066.us-west-2.elb.amazonaws.com/send"
     headers= {
         "content-type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYm90IiwiaWQiOiI1OGZkZDVmMzhmYjE0ODAwMGRiYjg1NjkifQ.6dPH-I-ub5p1eH-BqCL7KI2yx8FlHi8c45Jh-WKa5os"
     }
     body= {
-        "room_id": None,
+        "room_id":roomid,
         "msg": text,
         "platform": "facebook",
         "type": "human",
@@ -25,6 +28,9 @@ def callBotAPI(text, senderId):
     }
     r=requests.post(url, headers=headers, json=body)
     data=r.json()
+    a = data["room"]["id"]
+    if a is not None and sender not in store.keys() and a not in store.values():
+        store = {"senderid": sender, "roomid": a}
     messages = []
     for message in data['generated_msg']:
         messages.append({
@@ -46,6 +52,8 @@ def webhook():
       data = json.loads(request.data)
       event = data['entry'][0]['messaging'][0]
       sender = event['sender']['id'] # Sender ID
+
+
       # payload = {'recipient': {'id': sender}, 'message': {'text': "Hello World"}} # We're going to send this back
       if('message' in event and event['message'] != None and 'text' in event['message'] and event['message']['text'] != None):
         text = event['message']['text']  # Incoming Message Text
