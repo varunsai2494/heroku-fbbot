@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 
 token = "EAAEI5Yi88owBAIJYWZApylSkE2cydkyQc0qNKUpGBdjhNqKZA9QOdJ7yQSu0poTPDIdZCvtiH86q149TctBLl6jHglzeSHVGU2AdxtULLYAahnbzn5ZAoqTXauB8NLbZAN9pV5ORDifWuGc0W1YXHZAei9iT1bf1qQEga67etlmAZDZD"
-
+rooms = {}
 
 def callBotAPI(text, senderId):
     url="http://botmanappserverloadbalancer-1494940066.us-west-2.elb.amazonaws.com/send"
@@ -14,8 +14,16 @@ def callBotAPI(text, senderId):
         "content-type": "application/json",
         "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYm90IiwiaWQiOiI1OGZkZDVmMzhmYjE0ODAwMGRiYjg1NjkifQ.6dPH-I-ub5p1eH-BqCL7KI2yx8FlHi8c45Jh-WKa5os"
     }
+
+    room_id_val = None
+
+    if senderId in rooms:
+        room_id_val = rooms[senderId]
+    else:
+        room_id_val = None
+
     body= {
-        "room_id": None,
+        "room_id": room_id_val,
         "msg": text,
         "platform": "facebook",
         "type": "human",
@@ -25,6 +33,11 @@ def callBotAPI(text, senderId):
     }
     r=requests.post(url, headers=headers, json=body)
     data=r.json()
+
+
+    if 'room' in data and '_id' in data['room'] and data['room']['_id']!=None:
+        rooms[senderId] = data['room']['_id']
+
     messages = []
     for message in data['generated_msg']:
         messages.append({
