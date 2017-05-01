@@ -1,0 +1,117 @@
+2017-04-28T15:46:11.353881+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:11.353881+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:11.353882+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:11.353884+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:11.353932+00:00 app[web.1]: 
+2017-04-28T15:46:12.302086+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:12.302098+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:12.302099+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:12.302099+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:12.302100+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:12.302101+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:12.302106+00:00 app[web.1]: 
+2017-04-28T15:46:12.302948+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=a6ddd02a-690b-4c7e-8b72-d9d081404aa6 fwd="173.252.120.116" dyno=web.1 connect=1ms service=522ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:13.095145+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=93e8b7ae-b780-446f-99bd-107066fc24ea fwd="173.252.124.198" dyno=web.1 connect=3ms service=459ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:13.093397+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:13.093409+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:13.093409+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:13.093410+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:13.093411+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:13.093412+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:13.093413+00:00 app[web.1]: 
+2017-04-28T15:46:13.921988+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:13.921998+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:13.921998+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:13.921999+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:13.922000+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:13.922001+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:13.922001+00:00 app[web.1]: 
+2017-04-28T15:46:13.920846+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=93fa9b65-3dc6-48ae-bb01-52556e59ca87 fwd="173.252.124.239" dyno=web.1 connect=1ms service=431ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:14.700846+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=d2dd0264-2676-43da-a5e3-eb127f44e4b2 fwd="173.252.124.221" dyno=web.1 connect=0ms service=385ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:14.699723+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:14.699734+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:14.699735+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:14.699735+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:14.699736+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:14.699737+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:14.699782+00:00 app[web.1]: 
+2017-04-28T15:46:15.505460+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=e4a817a1-1d88-40ad-8bbd-a2a07a7fa849 fwd="173.252.120.98" dyno=web.1 connect=1ms service=440ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:15.501882+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:15.501893+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:15.501894+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:15.501895+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:15.501895+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:15.501896+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:15.501897+00:00 app[web.1]: 
+2017-04-28T15:46:16.352459+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=e6e32fb1-a9a5-4b6a-9985-d6c43cc332fa fwd="173.252.124.212" dyno=web.1 connect=1ms service=454ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:16.348129+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:16.348142+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:16.348143+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:16.348144+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:16.348144+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:16.348145+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:16.348209+00:00 app[web.1]: 
+2017-04-28T15:46:17.115001+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=29bb04d4-ff15-44b7-804a-aa064c036e37 fwd="173.252.124.216" dyno=web.1 connect=0ms service=405ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:17.112914+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:17.112915+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:17.112916+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:17.112902+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:17.112917+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:17.112918+00:00 app[web.1]: 
+2017-04-28T15:46:17.112915+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:17.908473+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=13dcc66c-5c8f-4baf-bed3-a6f9298d4062 fwd="69.63.188.104" dyno=web.1 connect=0ms service=405ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:17.906115+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:17.906127+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:17.906132+00:00 app[web.1]: 
+2017-04-28T15:46:17.906128+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:17.906129+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:17.906129+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:17.906131+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:18.689246+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:18.689256+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:18.689257+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:18.689258+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:18.689258+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:18.689259+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:18.689260+00:00 app[web.1]: 
+2017-04-28T15:46:18.690079+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=96f27847-358d-486b-ad9a-fd6d56d5f553 fwd="173.252.124.217" dyno=web.1 connect=1ms service=420ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:19.603786+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=22e71655-97bd-4f2f-bdfd-19bd5259c42b fwd="69.63.188.113" dyno=web.1 connect=1ms service=589ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:19.601353+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:19.601376+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:19.601375+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:19.601377+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:19.601377+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:19.601378+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:19.601512+00:00 app[web.1]: 
+2017-04-28T15:46:20.380803+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=8062e7f1-df60-44d4-a973-7e98a45f62f7 fwd="173.252.120.96" dyno=web.1 connect=0ms service=408ms status=200 bytes=171 protocol=https
+2017-04-28T15:46:20.378229+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:20.378242+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:20.378243+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:20.378244+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:20.378244+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:20.378245+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:20.378246+00:00 app[web.1]: 
+2017-04-28T15:46:21.139781+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:46:21.139797+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:46:21.139798+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:46:21.139798+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:46:21.139799+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:46:21.139800+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:46:21.139801+00:00 app[web.1]: 
+2017-04-28T15:46:21.141548+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=ae310d20-8720-43a8-bde6-461ac1732705 fwd="173.252.124.208" dyno=web.1 connect=1ms service=375ms status=200 bytes=171 protocol=https
+2017-04-28T15:49:54.909147+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=9c7d13b2-f5fa-4164-8aa9-ee3dadf05e5a fwd="66.220.152.130" dyno=web.1 connect=1ms service=419ms status=200 bytes=171 protocol=https
+2017-04-28T15:49:54.902465+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:49:54.902475+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:49:54.902476+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:49:54.902476+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:49:54.902477+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:49:54.902478+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:49:54.902479+00:00 app[web.1]: 
+2017-04-28T15:55:44.224333+00:00 heroku[router]: at=info method=POST path="/webhook" host=secure-wildwood-80354.herokuapp.com request_id=7eb16512-5ad2-4f70-9a82-84b680fdb3fb fwd="66.220.152.167" dyno=web.1 connect=1ms service=821ms status=200 bytes=171 protocol=https
+2017-04-28T15:55:44.219000+00:00 app[web.1]: Traceback (most recent call last):
+2017-04-28T15:55:44.219022+00:00 app[web.1]:   File "/app/app.py", line 65, in webhook
+2017-04-28T15:55:44.219024+00:00 app[web.1]:     messages = callBotAPI(text, sender)
+2017-04-28T15:55:44.219024+00:00 app[web.1]:   File "/app/app.py", line 42, in callBotAPI
+2017-04-28T15:55:44.219025+00:00 app[web.1]:     for message in data['generated_msg']:
+2017-04-28T15:55:44.219027+00:00 app[web.1]: KeyError: 'generated_msg'
+2017-04-28T15:55:44.220081+00:00 app[web.1]: 
