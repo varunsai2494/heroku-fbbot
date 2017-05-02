@@ -34,6 +34,8 @@ def callBotAPI(text, senderId):
     r=requests.post(url, headers=headers, json=body)
     data=r.json()
 
+    print data
+
 
     if 'room' in data and '_id' in data['room'] and data['room']['_id']!=None:
         rooms[senderId] = data['room']['_id']
@@ -46,8 +48,8 @@ def callBotAPI(text, senderId):
             },
             "message": message
         })
-
     return messages
+
 
 def sendMessageToFB(payload):
     r = requests.post('https://graph.facebook.com/v2.6/me/messages/?access_token=' + token,json=payload)  # Lets send it
