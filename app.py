@@ -59,6 +59,8 @@ def webhook():
   if request.method == 'POST':
     try:
       data = json.loads(request.data)
+      print 'inside webhook'
+      print data
       event = data['entry'][0]['messaging'][0]
       sender = event['sender']['id'] # Sender ID
       # payload = {'recipient': {'id': sender}, 'message': {'text': "Hello World"}} # We're going to send this back
