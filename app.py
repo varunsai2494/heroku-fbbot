@@ -71,12 +71,10 @@ def webhook():
             print payload
             sendMessageToFB(payload)
       elif('postback' in event and event['postback'] != None):
-          print '11111111111111111111111111111111111111111111'
           messages = callBotAPI(event['postback']['payload'], sender)
           for payload in messages:
               sendMessageToFB(payload)
       elif 'quick_reply' in event['message']:
-          print '22222222222222222222222222222222222'
           messages = callBotAPI(event['message']['quick_reply']['payload'],sender)
           for payload in messages:
               sendMessageToFB(payload)
