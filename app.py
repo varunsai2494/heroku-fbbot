@@ -64,14 +64,20 @@ def webhook():
       event = data['entry'][0]['messaging'][0]
       sender = event['sender']['id'] # Sender ID
       # payload = {'recipient': {'id': sender}, 'message': {'text': "Hello World"}} # We're going to send this back
-      if('message' in event and event['message'] != None and 'text' in event['message'] and event['message']['text'] != None):
+      if('message' in event and event['message'] != None and 'text' in event['message'] and event['message']['text'] != None and 'quick_reply' not in event['message']):
         text = event['message']['text']  # Incoming Message Text
         messages = callBotAPI(text, sender)
         for payload in messages:
             print payload
             sendMessageToFB(payload)
       elif('postback' in event and event['postback'] != None):
+          print '11111111111111111111111111111111111111111111'
           messages = callBotAPI(event['postback']['payload'], sender)
+          for payload in messages:
+              sendMessageToFB(payload)
+      elif 'quick_reply' in event['message']:
+          print '22222222222222222222222222222222222'
+          messages = callBotAPI(event['message']['quick_reply']['payload'],sender)
           for payload in messages:
               sendMessageToFB(payload)
     except Exception as e:
